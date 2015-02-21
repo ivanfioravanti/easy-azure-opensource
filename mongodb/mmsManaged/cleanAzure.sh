@@ -1,5 +1,5 @@
 #!/bin/bash
-source common
+source common.sh
 
 for currentServer in $(seq -f "$SERVERNAME%02g" 1 $NUMOFSERVERS)
 do

@@ -1,5 +1,5 @@
 #!/bin/bash
-source common
+source common.sh
 
 runtraced azure account set $SUBSCRIPTIONID
 runtraced azure network vnet create --vnet $VNETNAME -e 10.0.0.0 -i 8 -p 10.0.0.0 -r 11 -n $VNETSUBNETNAME -l "$AZURELOCATION"

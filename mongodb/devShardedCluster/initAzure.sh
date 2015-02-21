@@ -1,5 +1,5 @@
 #!/bin/bash
-source common
+source common.sh
 set -x #echo on
 azure account set $SUBSCRIPTIONID
 azure network vnet create --vnet $VNETNAME -e 10.0.0.0 -i 8 -p 10.0.0.0 -r 11 -n $VNETSUBNETNAME -l "$AZURELOCATION"
