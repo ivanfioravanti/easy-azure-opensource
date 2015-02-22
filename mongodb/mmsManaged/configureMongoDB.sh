@@ -11,6 +11,7 @@ sed -i 's/mmsGroupId=@GROUP_ID@/mmsGroupId='"$MMSGROUPID"'/g' /etc/mongodb-mms/a
 sed -i 's/mmsApiKey=@API_KEY@/mmsApiKey='"$MMSAPIKEY"'/g' /etc/mongodb-mms/automation-agent.config
 mkdir -p /mnt/data
 chown mongodb:mongodb /mnt/data
+sudo ln -s /mnt/data/ /data
 start mongodb-mms-automation-agent
 rm -rf mongodb-mms-automation-agent-manager_latest_amd64.deb
 export LC_ALL=en_US.UTF-8
