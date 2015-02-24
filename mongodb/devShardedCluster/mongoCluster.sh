@@ -15,7 +15,7 @@ case "$1" in
         mongod --configsvr --dbpath $DATAFOLDER/conf/conf0 --port 26000 --fork --logpath $DATAFOLDER/conf/conf0.log
         
         echo "\n\nWaiting before starting the Query Router.\n"
-        sleep 20
+        sleep 25
         
         mongos --configdb localhost:26000 --port 27017 --chunkSize 1 --fork --logpath $DATAFOLDER/mongos.log
     ;;
