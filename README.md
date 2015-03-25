@@ -50,9 +50,9 @@ This scenario creates a Sharded Cluster for development purpose on your local ma
 ### Important note
 On Azure multicast cannot be used, therefore we need to install and configure [Azure Cloud Plugin for Elasticsearch](https://github.com/elastic/elasticsearch-cloud-azure)
 
-This scripts can be used to create a dev environment, they install a lot of plugins and Kibana on all nodes just for dev and testing purposes.
+These scripts can be used to create a dev environment, they install some plugins and Kibana on all nodes just for dev and testing purposes.
 
-In order to use scripts in this repository, you have to follow instructions on plugin repository to create and upload certificates on Azure.
+In order to use these scripts, you have to follow instructions on Azure plugin repository to create and upload certificates on Azure.
 
 ### Summary
 This set of scripts can be used to simplify installation of O Elasticsearch cluster on Microsoft Azure.
