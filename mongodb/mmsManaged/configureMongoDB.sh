@@ -3,7 +3,7 @@ MMSGROUPID=54d91f23e4b033d7e2f4964f
 MMSAPIKEY=697ad9db57d0a922ce7a2cd7593b5547
 
 apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
-echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee /etc/apt/sources.list.d/mongodb.list
+echo "deb http://repo.mongodb.org/apt/ubuntu "$(lsb_release -sc)"/mongodb-org/3.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.0.list
 apt-get update
 curl -sOL https://mms.mongodb.com/download/agent/automation/mongodb-mms-automation-agent-manager_latest_amd64.deb
 dpkg -i mongodb-mms-automation-agent-manager_latest_amd64.deb
