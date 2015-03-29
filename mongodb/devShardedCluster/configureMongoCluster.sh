@@ -10,6 +10,12 @@ mv $MONGODBVERSION/bin/* /usr/local/bin
 apt-get install git -y
 export LC_ALL=C
 grep -q -F 'LC_ALL=C' /etc/default/locale || echo 'LC_ALL=C' >> /etc/default/locale
+
+# Disable THP
+echo never > /sys/kernel/mm/transparent_hugepage/enabled
+echo never > /sys/kernel/mm/transparent_hugepage/defrag
+grep -q -F 'transparent_hugepage=never' /etc/default/grub || echo 'transparent_hugepage=never' >> /etc/default/grub
+
 sudo -u azureuser git clone https://github.com/ivanfioravanti/easy-azure-opensource
 cd easy-azure-opensource/mongodb/devShardedCluster
 sudo ./mongoCluster.sh init

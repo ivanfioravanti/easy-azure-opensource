@@ -16,5 +16,12 @@ start mongodb-mms-automation-agent
 rm -rf mongodb-mms-automation-agent-manager_latest_amd64.deb
 export LC_ALL=en_US.UTF-8
 grep -q -F 'LC_ALL=C' /etc/default/locale || echo 'LC_ALL=C' >> /etc/default/locale
+
+# Disable THP
+echo never > /sys/kernel/mm/transparent_hugepage/enabled
+echo never > /sys/kernel/mm/transparent_hugepage/defrag
+grep -q -F 'transparent_hugepage=never' /etc/default/grub || echo 'transparent_hugepage=never' >> /etc/default/grub
+
+#Install MongoDB Client tools
 sudo apt-get install -y mongodb-org-shell
 sudo apt-get install -y mongodb-org-tools
