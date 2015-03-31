@@ -1,6 +1,6 @@
 #!/bin/bash
-MMSGROUPID=54d91f23e4b033d7e2f4964f
-MMSAPIKEY=697ad9db57d0a922ce7a2cd7593b5547
+MMSGROUPID=YOURMMSGROUPIDHERE
+MMSAPIKEY=YOURMMSAPIKEYHERE
 
 apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
 echo "deb http://repo.mongodb.org/apt/ubuntu "$(lsb_release -sc)"/mongodb-org/3.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.0.list
